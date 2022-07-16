@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  test:
+    image: imega/busted
+    environment:
+      - LUA_PATH=/app/?.lua
+    command: busted /app
+    volumes:
+      - ./lib:/app/lib
